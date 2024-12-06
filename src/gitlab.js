@@ -59,7 +59,7 @@ class GitLab {
 
     async fetchAllEvents(
         accessToken,
-        startDate = new Date(),
+        startDate = new Date('1970/01/01'),
         endDate = new Date(),
     ) {
         const events = [];
@@ -102,7 +102,7 @@ class GitLab {
 
                 page++;
 
-                await new Promise((resolve) => setTimeout(resolve, 100));
+                // await new Promise((resolve) => setTimeout(resolve, 100));
             } catch (error) {
                 console.error(error);
                 hasMoreEvents = false;

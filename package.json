@@ -1,5 +1,5 @@
 {
-    "name": "git-history",
+    "name": "fake-git-history",
     "version": "1.8.0",
     "description": "A command-line tool to generate your GitHub activity graph based off GitLab events.",
     "bin": "src/cli.js",

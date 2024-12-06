@@ -26,6 +26,9 @@ A command-line tool that generates a GitHub (or GitLab) activity graph based off
 
 Done! Now take a look at your GitHub profile 😉
 
+> [!TIP]
+> If you encounter the error `fatal: refusing to merge unrelated histories`, checkout your local changes to a new branch and push that.
+
 ## Customizations
 
 ### `--startDate` and `--endDate`
@@ -33,6 +36,19 @@ Done! Now take a look at your GitHub profile 😉
 By default, the script generates GitHub commits for all GitLab commits.
 However, if you want to generate activity for specific dates, use these options:
 
+> [!IMPORTANT]
+> At the moment, it is crucial to **pass both options**, if you want to define a time range.
+
 ```shell script
 npx fake-git-history --startDate "2020/09/01" --endDate "2020/09/30"
 ```
+
+## Annotations
+
+### Backstory
+
+The idea is already a bit older. At first, I wanted to make a web app allowing to import GitLab commits to GitHub - the challenge was to make it without needing a database. 
+
+I actually got far with it (using Next.js), but that dream, to do it without a database was suddenly impossible, because I needed a secure place to store SSH keys (user cant interact with the shell like in this case). 
+
+So, I left the project behind for a few weeks, but I still **wanted to show that I was coding on GitHub - just not committing specifically on GitHub -**, thus I integrated the idea (you can still find the **TypeScript class** that I used for the Next.js approach in `/src/.utils/gitlab.ts`) into this fork of a Git commit history faker. Only thing is: you don't fake it anymore! :)
