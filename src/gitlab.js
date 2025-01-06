@@ -108,6 +108,7 @@ class GitLab {
                 hasMoreEvents = false;
             }
         }
+        console.log(events);
 
         return events;
     }

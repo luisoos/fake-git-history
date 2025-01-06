@@ -51,6 +51,10 @@ module.exports = async function ({
         process.chdir(historyFolder);
         await execAsync(`git init`);
 
+        // Create and checkout to a new random branch.
+        const branchName = `gitlab-commits-${Math.random().toString(36).substring(7)}`;
+        await execAsync(`git checkout -b ${branchName}`);
+
         // Create commits.
         for (const date of commitDateList) {
             // Change spinner so user can get the progress right now.

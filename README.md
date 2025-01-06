@@ -10,7 +10,7 @@ A command-line tool that generates a GitHub (or GitLab) activity graph based off
 ## How To Use
 
 1. Make sure you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and
-   [Node.js](https://nodejs.org/en/download/) installed on your machine.#
+   [Node.js](https://nodejs.org/en/download/) installed on your machine.
 2. Create a [Personal Access Token in GitLab](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) and make sure you give the permission `read_user`.
 3. Generate your commits and provide the GitLab PAT:
     ```sh
